@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email List</title>
+
+    <!-- AXIOS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+      integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- VUE JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+
+      <h1>GENERATORE 10 EMAIL</h1>
+
+      <!-- Btn per generare eMail -->
+      <button @click="generateEmails">Genera</button>
+      <p v-if="isLoading">Loading...</p>
+
+      <!-- Lista Email -->
+      <ul v-if="mailList.length === 10">
+        <li v-for="mail in mailList">{{mail}}</li>
+      </ul>
+
+    </div>
+    <!-- Custom Script -->
+    <script src="./js/script.js"></script>
+
+  </body>
+</html>
